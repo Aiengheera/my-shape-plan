@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f2ec">
+<title>My Shape Plan — 8 Weeks</title>
+<style>
+:root{--bg:#f6f2ec;--card:#fffdf9;--ink:#292923;--muted:#77766d;--accent:#466b55;--accent2:#dce8dc;--line:#e6e0d6;--peach:#f3e2d5;--gold:#b88c45}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:env(safe-area-inset-top) 16px calc(90px + env(safe-area-inset-bottom))}.hero{padding:28px 4px 18px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-size:11px;font-weight:800}.hero h1{font-size:32px;line-height:1.1;letter-spacing:-.04em;margin:8px 0}.hero p{margin:8px 0;color:var(--muted);max-width:540px}.pill{display:inline-flex;background:var(--accent2);color:var(--accent);border-radius:99px;padding:6px 10px;font-size:12px;font-weight:700}.nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow:auto;padding:8px 0 12px;background:var(--bg)}.nav button{flex:1;min-width:max-content;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:12px;padding:10px 13px;font-size:13px;font-weight:700}.nav button.active{background:var(--accent);color:white;border-color:var(--accent)}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px}.metric small,.muted{color:var(--muted)}.metric small{font-size:12px}.metric strong{display:block;font-size:27px;letter-spacing:-.04em;margin:3px 0}.metric span{font-size:12px;color:var(--muted)}h2{font-size:21px;letter-spacing:-.025em;margin:8px 0 12px}h3{font-size:16px;margin:0 0 5px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 2px 10px}.sectionhead h2{margin:0}.smallbtn,.primary,.secondary{border:0;border-radius:12px;padding:11px 14px;font-weight:750}.primary{background:var(--accent);color:white}.secondary,.smallbtn{background:var(--accent2);color:var(--accent)}.smallbtn{padding:7px 10px;font-size:12px}.bar{height:8px;border-radius:9px;background:#e8e4dc;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:9px;transition:width .2s}.row{display:flex;align-items:center;gap:10px}.row>*:first-child{flex:1}.meal{border-top:1px solid var(--line);padding:12px 0}.meal:first-child{border-top:0}.meal p{margin:4px 0;color:var(--muted);font-size:14px}.tag{font-size:11px;background:#f3e8db;color:#815e31;padding:4px 7px;border-radius:7px;white-space:nowrap}.checkrow{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.checkrow:last-child{border-bottom:0}.checkrow input{width:20px;height:20px;accent-color:var(--accent);margin-top:2px}.checkrow label{flex:1}.checkrow small{display:block;color:var(--muted);margin-top:2px}.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 12px;color:var(--ink);outline-color:var(--accent)}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.note{background:#f7eee4;border-radius:12px;padding:12px;font-size:13px;color:#6e543c}.weekrow{display:grid;grid-template-columns:54px repeat(4,minmax(0,1fr));gap:5px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.weekrow input{min-width:0;width:100%;padding:8px 3px;border:1px solid var(--line);border-radius:8px;background:white;text-align:center;font-size:12px}.weekrow.head{color:var(--muted);font-weight:800}.tiny{font-size:11px;color:var(--muted)}.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(246,242,236,.94);backdrop-filter:blur(12px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:6}.bottomin{max-width:728px;margin:auto;display:flex;gap:10px;align-items:center}.bottomin div{flex:1;font-size:12px;color:var(--muted)}.bottomin strong{display:block;color:var(--ink);font-size:14px}.hidden{display:none!important}.success{color:var(--accent);font-weight:700}.danger{color:#9a493f}@media(min-width:620px){.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+  <div class="eyebrow">Your personal 8-week programme</div>
+  <h1>My Shape Plan<span style="color:var(--accent)">.</span></h1>
+  <p>Built around your Nigerian meals, daily walking, and the goal of a stronger glute shape with a smaller waist and belly.</p>
+  <span class="pill">WEEK 1 OF 8 · PERSONAL PLAN</span>
+</header>
+<nav class="nav" aria-label="Main navigation">
+<button class="active" data-page="home">Today</button><button data-page="food">Meals</button><button data-page="workout">Workout</button><button data-page="progress">Progress</button><button data-page="settings">My plan</button>
+</nav>
+
+<section class="page active" id="home">
+  <div class="grid">
+    <div class="card metric"><small>Daily calorie guide</small><strong>1,900</strong><span>Adjust after 2–3 weeks</span></div>
+    <div class="card metric"><small>Protein guide</small><strong>110–130 g</strong><span>Daily, if appropriate for you</span></div>
+    <div class="card metric"><small>Steps target</small><strong>8k–11k</strong><span>On most days, as tolerated</span></div>
+    <div class="card metric"><small>First milestone</small><strong>96 kg</strong><span>From 101 kg; optional</span></div>
+  </div>
+  <div class="sectionhead"><h2>Today's check-in</h2><span id="todayDate" class="tiny"></span></div>
+  <div class="card">
+    <div class="row"><div><h3>Steps walked</h3><span class="muted" style="font-size:13px">Your daily movement</span></div><strong id="stepsDisplay">0 / 10,000</strong></div>
+    <div class="bar"><i id="stepsBar"></i></div>
+    <div class="field"><label for="stepsInput">Enter today's steps</label><input id="stepsInput" type="number" min="0" inputmode="numeric" placeholder="e.g. 10673"></div>
+    <div class="row"><div><h3>Water check-ins</h3><span class="muted" style="font-size:13px">Tap each glass/bottle check-in you complete</span></div><strong id="waterCount">0</strong></div>
+    <div class="row" style="margin-top:10px;gap:7px"><button class="secondary" id="waterMinus">−</button><button class="primary" id="waterPlus">+ Water check-in</button><button class="secondary" id="waterReset">Reset</button></div>
+  </div>
+  <div class="sectionhead"><h2>Today's movement</h2><button class="smallbtn" onclick="showPage('workout')">View routine</button></div>
+  <div class="card"><div class="row"><div><h3 id="todayWorkoutTitle">Glutes & legs</h3><p id="todayWorkoutDesc" class="muted" style="margin:3px 0;font-size:13px">Strength session · around 25–35 minutes</p></div><span class="tag" id="todayWorkoutTag">Strength</span></div><div id="todayWorkoutList" style="margin-top:10px"></div><button class="primary" style="width:100%;margin-top:12px" onclick="showPage('workout')">Open workout plan</button></div>
+  <div class="sectionhead"><h2>Today's meal focus</h2><button class="smallbtn" onclick="showPage('food')">Meal plan</button></div>
+  <div class="card"><h3 id="todayMealTitle">Monday · Balanced Nigerian meals</h3><p class="muted" id="todayMealDesc">Protein at each meal, vegetables daily, and measured oil.</p><div class="note" style="margin-top:12px">Your 35-inch belly and 30-inch waist are goals, not guaranteed eight-week outcomes. Aim for steady habits and preserve strength.</div></div>
+</section>
+
+<section class="page" id="food">
+  <div class="sectionhead"><h2>7-day Nigerian menu</h2><span class="tag">Repeat weekly</span></div>
+  <div class="card"><p class="muted" style="margin-top:0;font-size:13px">Calorie amounts vary with portion size and cooking oil. Use these meals as a flexible menu, not a rigid prescription. Add portions as needed to approach your daily target.</p><div id="mealList"></div></div>
+  <div class="card"><h3>Simple portion guide</h3><div class="meal"><strong>Protein</strong><p>Include eggs, turkey, fish, chicken, beans or yoghurt at meals.</p></div><div class="meal"><strong>Starches</strong><p>Keep rice, pasta, yam, plantain and swallow in satisfying, moderate portions.</p></div><div class="meal"><strong>Vegetables & fruit</strong><p>Add vegetables at lunch and dinner and include fruit most days.</p></div><div class="meal"><strong>Oil, sauces and drinks</strong><p>Measure oil and groundnuts; account for sugary drinks and rich sauces.</p></div></div>
+</section>
+
+<section class="page" id="workout">
+  <div class="sectionhead"><h2>Weekly training plan</h2><span class="tag">Repeat × 8 weeks</span></div>
+  <div class="note">Warm up for 5 minutes. Rest 60–120 seconds between sets. Start with easy variations and stop for sharp pain, dizziness, chest pain or unusual breathlessness.</div>
+  <div id="workoutList"></div>
+  <div class="card"><h3>How to progress</h3><p class="muted">Weeks 1–2: learn the movements. Weeks 3–4: add a few repetitions or light resistance. Weeks 5–6: progress gradually while keeping good form. Weeks 7–8: continue consistently and review measurements. Don't add resistance and repetitions all at once.</p></div>
+</section>
+
+<section class="page" id="progress">
+  <div class="sectionhead"><h2>Measurement tracker</h2><span class="tag">Weekly</span></div>
+  <div class="card">
+    <div class="grid three">
+      <div class="metric"><small>Starting belly</small><strong>41″</strong><span>Goal 35″</span></div>
+      <div class="metric"><small>Starting waist</small><strong>35″</strong><span>Goal 30″</span></div>
+      <div class="metric"><small>Starting hips</small><strong>49″</strong><span>Goal 49″</span></div>
+    </div>
+    <p class="tiny">Measure in the morning under similar conditions. Belly = fullest abdominal point; waist = natural waist; hips = fullest part. Small variations are normal.</p>
+    <div class="weekrow head"><div>Week</div><div>Weight kg</div><div>Belly in</div><div>Waist in</div><div>Hips in</div></div>
+    <div id="tracker"></div>
+    <div class="field"><label for="progressNotes">Progress notes</label><textarea id="progressNotes" rows="3" placeholder="Energy, clothing fit, strength, cycle-related changes..."></textarea></div>
+    <button class="primary" style="width:100%" id="exportBtn">Export my progress (CSV)</button>
+    <p class="tiny">Your entries stay in this browser on this device when local storage is available. Export a backup regularly.</p>
+  </div>
+  <div class="card"><h3>What progress means</h3><p class="muted">Look for trends in waist/belly, strength, energy and how clothes fit. Hip measurements may change with fat loss; glute training supports muscle but cannot guarantee a fixed hip measurement.</p></div>
+</section>
+
+<section class="page" id="settings">
+  <div class="sectionhead"><h2>Your personal profile</h2><span class="tag">Pre-filled for you</span></div>
+  <div class="card">
+    <div class="fields">
+      <div class="field"><label>Age</label><input value="35" disabled></div>
+      <div class="field"><label>Sex</label><input value="Female" disabled></div>
+      <div class="field"><label>Height</label><input value="5 ft 7 in" disabled></div>
+      <div class="field"><label>Starting weight (kg)</label><input value="101" disabled></div>
+      <div class="field"><label>Calorie target</label><input id="calorieTarget" type="number" value="1900" min="1200" max="3500"></div>
+      <div class="field"><label>Daily steps target</label><input id="stepTarget" type="number" value="10000" min="1000" max="30000"></div>
+    </div>
+    <p class="tiny">The calorie target is an estimate, not a medical prescription. Do not use a very low calorie target; seek professional advice if pregnant/breastfeeding, or if you have a condition or medicine that affects nutrition or blood sugar.</p>
+    <button class="primary" id="saveSettings" style="width:100%">Save my targets</button>
+    <p id="settingsStatus" class="success" aria-live="polite"></p>
+  </div>
+  <div class="card"><h3>Your goal measurements</h3><div class="meal"><div class="row"><div><strong>Belly</strong><p>41″ → 35″</p></div><span class="tag">−6″ goal</span></div></div><div class="meal"><div class="row"><div><strong>Waist</strong><p>35″ → 30″</p></div><span class="tag">−5″ goal</span></div></div><div class="meal"><div class="row"><div><strong>Hips</strong><p>49″ → 49″</p></div><span class="tag">Preserve shape</span></div></div><div class="note">These are ambitious goals for eight weeks, not guaranteed results. You can keep working toward them beyond week eight.</div></div>
+  <div class="card"><h3>Data & privacy</h3><p class="muted">This is a standalone prototype. It does not connect to Apple Health, send reminders, or sync between devices. Entries are stored locally in your browser where supported. Use Export on the Progress tab to save a backup.</p><button class="secondary" id="resetApp">Reset locally stored app data</button><p class="tiny danger">Reset deletes your entries from this browser. Export a backup first if you want to keep them.</p></div>
+</section>
+</div>
+<div class="bottom"><div class="bottomin"><div><strong id="bottomDate">Your daily check-in</strong><span id="bottomHint">Small consistent steps count.</span></div><button class="primary" onclick="showPage('progress')">Log progress</button></div></div>
+<script>
+const meals=[
+{day:"Monday",breakfast:"Eggs, whole-wheat bread and an orange",lunch:"Jollof rice, grilled turkey and vegetables",dinner:"Efo riro, fish and a moderate portion of amala",snack:"Plain yoghurt and fruit"},
+{day:"Tuesday",breakfast:"Oats with milk and banana",lunch:"Beans porridge, boiled egg and vegetables",dinner:"Grilled chicken, boiled yam and vegetable sauce",snack:"Fruit and a small handful of groundnuts"},
+{day:"Wednesday",breakfast:"Eggs, bread and tomatoes",lunch:"Pasta with chicken and mixed vegetables",dinner:"Okra soup with fish and a moderate portion of swallow",snack:"Plain yoghurt and fruit"},
+{day:"Thursday",breakfast:"Moi moi and eggs",lunch:"Rice, beans, grilled fish and vegetables",dinner:"Vegetable soup with lean meat and moderate eba",snack:"Fruit and yoghurt"},
+{day:"Friday",breakfast:"Oats, milk and fruit",lunch:"Grilled fish, sweet potato and vegetables",dinner:"Rice, turkey and vegetable sauce",snack:"Yoghurt or a small portion of nuts"},
+{day:"Saturday",breakfast:"Eggs, whole-wheat bread and fruit",lunch:"Beans, grilled fish and a small serving of plantain",dinner:"Chicken stew, rice and vegetables",snack:"Yoghurt and fruit"},
+{day:"Sunday",breakfast:"Moi moi, eggs or oats",lunch:"Preferred family meal with protein and vegetables",dinner:"Vegetable soup, fish and moderate swallow",snack:"Fruit or yoghurt if hungry"}
+];
+const workouts=[
+{day:"Monday",title:"Glutes & legs",kind:"Strength · 25–35 min",items:[["Glute bridges","3 × 12–15"],["Chair squats","3 × 10–12"],["Supported reverse lunges","2 × 8 each leg"],["Side-lying leg raises","2 × 15 each side"]]},
+{day:"Tuesday",title:"Walking & core",kind:"Cardio · 30–40 min",items:[["Brisk walk","30–40 min"],["Dead bugs","2 × 8 each side"],["Bird dogs","2 × 10 each side"]]},
+{day:"Wednesday",title:"Full body",kind:"Strength · 25–35 min",items:[["Hip hinges","3 × 12"],["Wall push-ups","3 × 10–12"],["Rows with bottles or dumbbells","3 × 12"],["Glute bridges","3 × 15"]]},
+{day:"Thursday",title:"Walk & recover",kind:"Movement · 30–45 min",items:[["Comfortable or brisk walk","30–45 min"],["Gentle mobility","5–10 min"]]},
+{day:"Friday",title:"Glute focus",kind:"Strength · 25–35 min",items:[["Hip thrusts or glute bridges","3 × 12–15"],["Chair squats","3 × 12"],["Hip hinges","3 × 12"],["Side-lying leg raises","3 × 15 each side"]]},
+{day:"Saturday",title:"Longer walk",kind:"Cardio · 40–60 min",items:[["Comfortable walk","40–60 min, or split sessions"]]},
+{day:"Sunday",title:"Recovery",kind:"Rest day",items:[["Gentle walk or stretching","Optional"],["Meal preparation & recovery","As needed"]]}
+];
+const defaultState={stepsByDate:{},waterByDate:{},measurements:Array.from({length:8},()=>({weight:"",belly:"",waist:"",hips:""})),notes:"",calorieTarget:1900,stepTarget:10000};
+let state=loadState();
+function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem("myShapePlanV1")||"{}")}}catch(e){return structuredClone(defaultState)}}
+function save(){try{localStorage.setItem("myShapePlanV1",JSON.stringify(state))}catch(e){}}
+function dateKey(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+function renderMeals(){document.getElementById("mealList").innerHTML=meals.map((m,i)=>`<div class="meal"><div class="row"><h3>${m.day}</h3><span class="tag">Day ${i+1}</span></div><p><b>Breakfast:</b> ${m.breakfast}</p><p><b>Lunch:</b> ${m.lunch}</p><p><b>Dinner:</b> ${m.dinner}</p><p><b>Snack:</b> ${m.snack}</p></div>`).join("")}
+function renderWorkouts(){document.getElementById("workoutList").innerHTML=workouts.map((w,i)=>`<div class="card"><div class="row"><div><h3>${w.day} · ${w.title}</h3><span class="muted" style="font-size:12px">${w.kind}</span></div><input type="checkbox" aria-label="Mark ${w.day} workout complete" id="done${i}" style="width:22px;height:22px;accent-color:var(--accent)"></div>${w.items.map(x=>`<div class="checkrow"><div style="flex:1"><strong>${x[0]}</strong><small>${x[1]}</small></div></div>`).join("")}<p class="tiny">Tick the box when you've completed this session.</p></div>`).join("");workouts.forEach((w,i)=>{const el=document.getElementById("done"+i);el.checked=!!(state.workoutDone&&state.workoutDone[dateKey()]&&state.workoutDone[dateKey()][i]);el.addEventListener("change",()=>{state.workoutDone=state.workoutDone||{};state.workoutDone[dateKey()]=state.workoutDone[dateKey()]||{};state.workoutDone[dateKey()][i]=el.checked;save()})})}
+function renderTracker(){const root=document.getElementById("tracker");root.innerHTML=state.measurements.map((m,i)=>`<div class="weekrow"><div><b>${i+1}</b>${i===0?'<div class="tiny">Start</div>':i===7?'<div class="tiny">End</div>':''}</div><input data-i="${i}" data-k="weight" type="number" placeholder="101" value="${esc(m.weight)}" aria-label="Week ${i+1} weight kg"><input data-i="${i}" data-k="belly" type="number" placeholder="${i===0?41:"—"}" value="${esc(m.belly)}" aria-label="Week ${i+1} belly inches"><input data-i="${i}" data-k="waist" type="number" placeholder="${i===0?35:"—"}" value="${esc(m.waist)}" aria-label="Week ${i+1} waist inches"><input data-i="${i}" data-k="hips" type="number" placeholder="${i===0?49:"—"}" value="${esc(m.hips)}" aria-label="Week ${i+1} hips inches"></div>`).join("");root.querySelectorAll("input").forEach(inp=>inp.addEventListener("change",()=>{state.measurements[+inp.dataset.i][inp.dataset.k]=inp.value;save()}))}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderToday(){const key=dateKey(),steps=Number(state.stepsByDate[key]||0),target=Number(state.stepTarget||10000),water=Number(state.waterByDate[key]||0);document.getElementById("todayDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});document.getElementById("bottomDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"});document.getElementById("stepsInput").value=steps||"";document.getElementById("stepsDisplay").textContent=steps.toLocaleString()+" / "+target.toLocaleString();document.getElementById("stepsBar").style.width=Math.min(100,steps/target*100)+"%";document.getElementById("waterCount").textContent=water+" check-ins";const idx=(new Date().getDay()+6)%7,w=workouts[idx],m=meals[idx];document.getElementById("todayWorkoutTitle").textContent=w.title;document.getElementById("todayWorkoutDesc").textContent=w.kind;document.getElementById("todayWorkoutTag").textContent=idx===0||idx===2||idx===4?"Strength":idx===6?"Recovery":"Movement";document.getElementById("todayWorkoutList").innerHTML=w.items.slice(0,3).map(x=>`<div class="checkrow"><div><strong>${x[0]}</strong><small>${x[1]}</small></div></div>`).join("");document.getElementById("todayMealTitle").textContent=m.day+" · Meal focus";document.getElementById("todayMealDesc").textContent="Breakfast: "+m.breakfast+". Lunch: "+m.lunch+". Dinner: "+m.dinner+"."}
+document.getElementById("stepsInput").addEventListener("change",e=>{state.stepsByDate[dateKey()]=Math.max(0,Number(e.target.value||0));save();renderToday()});
+document.getElementById("waterPlus").addEventListener("click",()=>{state.waterByDate[dateKey()]=Number(state.waterByDate[dateKey()]||0)+1;save();renderToday()});
+document.getElementById("waterMinus").addEventListener("click",()=>{state.waterByDate[dateKey()]=Math.max(0,Number(state.waterByDate[dateKey()]||0)-1);save();renderToday()});
+document.getElementById("waterReset").addEventListener("click",()=>{state.waterByDate[dateKey()]=0;save();renderToday()});
+document.getElementById("progressNotes").addEventListener("change",e=>{state.notes=e.target.value;save()});
+document.getElementById("calorieTarget").value=state.calorieTarget;document.getElementById("stepTarget").value=state.stepTarget;
+document.getElementById("saveSettings").addEventListener("click",()=>{state.calorieTarget=Math.max(1200,Math.min(3500,Number(document.getElementById("calorieTarget").value)||1900));state.stepTarget=Math.max(1000,Math.min(30000,Number(document.getElementById("stepTarget").value)||10000));save();document.getElementById("settingsStatus").textContent="Your targets have been saved on this device.";renderToday()});
+document.getElementById("exportBtn").addEventListener("click",()=>{const rows=[["Week","Weight kg","Belly inches","Waist inches","Hips inches"],...state.measurements.map((m,i)=>[i+1,m.weight,m.belly,m.waist,m.hips])];const csv=rows.map(r=>r.map(x=>'"'+String(x??"").replace(/"/g,'""')+'"').join(",")).join("\n");const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="my-shape-plan-progress.csv";a.click();URL.revokeObjectURL(url)});
+document.getElementById("resetApp").addEventListener("click",()=>{if(confirm("Reset all locally stored steps, water check-ins, settings and measurements? Export a backup first if needed.")){localStorage.removeItem("myShapePlanV1");state=loadState();renderTracker();renderToday();document.getElementById("progressNotes").value="";document.getElementById("calorieTarget").value=state.calorieTarget;document.getElementById("stepTarget").value=state.stepTarget;document.getElementById("settingsStatus").textContent="Local app data reset."}});
+document.getElementById("progressNotes").value=state.notes||"";
+renderMeals();renderWorkouts();renderTracker();renderToday();
+</script>
+</body></html>
