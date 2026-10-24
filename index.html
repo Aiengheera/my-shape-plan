@@ -8,27 +8,44 @@
 <style>
 :root{--bg:#f6f2ec;--card:#fffdf9;--ink:#292923;--muted:#77766d;--accent:#466b55;--accent2:#dce8dc;--line:#e6e0d6;--peach:#f3e2d5;--gold:#b88c45}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:env(safe-area-inset-top) 16px calc(90px + env(safe-area-inset-bottom))}.hero{padding:28px 4px 18px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-size:11px;font-weight:800}.hero h1{font-size:32px;line-height:1.1;letter-spacing:-.04em;margin:8px 0}.hero p{margin:8px 0;color:var(--muted);max-width:540px}.pill{display:inline-flex;background:var(--accent2);color:var(--accent);border-radius:99px;padding:6px 10px;font-size:12px;font-weight:700}.nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow:auto;padding:8px 0 12px;background:var(--bg)}.nav button{flex:1;min-width:max-content;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:12px;padding:10px 13px;font-size:13px;font-weight:700}.nav button.active{background:var(--accent);color:white;border-color:var(--accent)}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px}.metric small,.muted{color:var(--muted)}.metric small{font-size:12px}.metric strong{display:block;font-size:27px;letter-spacing:-.04em;margin:3px 0}.metric span{font-size:12px;color:var(--muted)}h2{font-size:21px;letter-spacing:-.025em;margin:8px 0 12px}h3{font-size:16px;margin:0 0 5px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 2px 10px}.sectionhead h2{margin:0}.smallbtn,.primary,.secondary{border:0;border-radius:12px;padding:11px 14px;font-weight:750}.primary{background:var(--accent);color:white}.secondary,.smallbtn{background:var(--accent2);color:var(--accent)}.smallbtn{padding:7px 10px;font-size:12px}.bar{height:8px;border-radius:9px;background:#e8e4dc;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:9px;transition:width .2s}.row{display:flex;align-items:center;gap:10px}.row>*:first-child{flex:1}.meal{border-top:1px solid var(--line);padding:12px 0}.meal:first-child{border-top:0}.meal p{margin:4px 0;color:var(--muted);font-size:14px}.tag{font-size:11px;background:#f3e8db;color:#815e31;padding:4px 7px;border-radius:7px;white-space:nowrap}.checkrow{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.checkrow:last-child{border-bottom:0}.checkrow input{width:20px;height:20px;accent-color:var(--accent);margin-top:2px}.checkrow label{flex:1}.checkrow small{display:block;color:var(--muted);margin-top:2px}.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 12px;color:var(--ink);outline-color:var(--accent)}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.note{background:#f7eee4;border-radius:12px;padding:12px;font-size:13px;color:#6e543c}.weekrow{display:grid;grid-template-columns:54px repeat(4,minmax(0,1fr));gap:5px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.weekrow input{min-width:0;width:100%;padding:8px 3px;border:1px solid var(--line);border-radius:8px;background:white;text-align:center;font-size:12px}.weekrow.head{color:var(--muted);font-weight:800}.tiny{font-size:11px;color:var(--muted)}.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(246,242,236,.94);backdrop-filter:blur(12px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:6}.bottomin{max-width:728px;margin:auto;display:flex;gap:10px;align-items:center}.bottomin div{flex:1;font-size:12px;color:var(--muted)}.bottomin strong{display:block;color:var(--ink);font-size:14px}.hidden{display:none!important}.success{color:var(--accent);font-weight:700}.danger{color:#9a493f}@media(min-width:620px){.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:40px}}
-.chartwrap{width:100%;min-height:90px}.fields select{width:100%;border:1px solid var(--line);background:#fffdf9;border-radius:12px;padding:12px;font:inherit;color:var(--ink)}.nav{overflow-x:auto}.nav button{white-space:nowrap;flex-shrink:0}#foodLogList .meal{padding:10px 0;border-bottom:1px solid var(--line)}#foodLogList .meal:last-child{border-bottom:0}#foodLogList button{min-width:38px;padding:7px}.chartwrap svg{max-width:100%}
 </style>
 </head>
 <body>
-<div class="app">
+
+<section id="authGate" style="max-width:520px;margin:24px auto;padding:20px">
+  <div class="card">
+    <div class="eyebrow">Private account</div>
+    <h1 style="font-size:28px;margin:8px 0">My Shape Plan</h1>
+    <p class="muted">Create an account or sign in. Your progress is private to your account.</p>
+    <div class="field"><label for="authEmail">Email address</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+    <div class="field"><label for="authPassword">Password (at least 8 characters recommended)</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="Your password" required></div>
+    <div class="row" style="margin-top:14px;flex-wrap:wrap">
+      <button class="primary" id="signInBtn">Sign in</button>
+      <button class="secondary" id="signUpBtn">Create account</button>
+    </div>
+    <p id="authStatus" class="tiny" role="status" aria-live="polite"></p>
+    <p class="tiny">Use an email you can access. If email confirmation is enabled in Supabase, you must confirm your address before signing in. Never share your password.</p>
+  </div>
+</section>
+
+<div class="app" id="mainApp" style="display:none">
 <header class="hero">
   <div class="eyebrow">Your personal 8-week programme</div>
   <h1>My Shape Plan<span style="color:var(--accent)">.</span></h1>
-  <p>Built around your Nigerian meals, daily walking, and the goal of a stronger glute shape with a smaller waist and belly.</p>
-  <span class="pill">WEEK 1 OF 8 · PERSONAL PLAN</span>
+  <p>A flexible Nigerian-food-friendly plan for building healthy habits, tracking movement, and monitoring your own progress.</p>
+  <span class="pill">YOUR PERSONAL 8-WEEK PLAN</span>
 </header>
+<div class="card" style="padding:10px 14px"><div class="row"><div><small class="muted">Signed in as</small><div id="signedInEmail" style="font-weight:700;overflow-wrap:anywhere"></div></div><button class="secondary" id="signOutBtn">Sign out</button></div><p id="cloudStatus" class="tiny" aria-live="polite">Connecting to your private account…</p></div>
 <nav class="nav" aria-label="Main navigation">
-<button class="active" data-page="home">Today</button><button data-page="food">Meals</button><button data-page="foodlog">Food log</button><button data-page="workout">Workout</button><button data-page="progress">Progress</button><button data-page="settings">My plan</button>
+<button class="active" data-page="home">Today</button><button data-page="food">Meals</button><button data-page="workout">Workout</button><button data-page="progress">Progress</button><button data-page="settings">My plan</button>
 </nav>
 
 <section class="page active" id="home">
   <div class="grid">
-    <div class="card metric"><small>Daily calorie guide</small><strong>1,900</strong><span>Adjust after 2–3 weeks</span></div>
-    <div class="card metric"><small>Protein guide</small><strong>110–130 g</strong><span>Daily, if appropriate for you</span></div>
-    <div class="card metric"><small>Steps target</small><strong>8k–11k</strong><span>On most days, as tolerated</span></div>
-    <div class="card metric"><small>First milestone</small><strong>96 kg</strong><span>From 101 kg; optional</span></div>
+    <div class="card metric"><small>Daily calorie guide</small><strong id="homeCalorieTarget">Set your target</strong><span>Personal estimate, review as needed</span></div>
+    <div class="card metric"><small>Protein guide</small><strong>Personalise</strong><span>Needs vary by person</span></div>
+    <div class="card metric"><small>Steps target</small><strong id="homeStepTarget">10,000</strong><span>Personal daily movement goal</span></div>
+    <div class="card metric"><small>First milestone</small><strong id="homeWeightGoal">Optional</strong><span>Choose a goal that suits you</span></div>
   </div>
   <div class="sectionhead"><h2>Today's check-in</h2><span id="todayDate" class="tiny"></span></div>
   <div class="card">
@@ -41,31 +58,57 @@
   <div class="sectionhead"><h2>Today's movement</h2><button class="smallbtn" onclick="showPage('workout')">View routine</button></div>
   <div class="card"><div class="row"><div><h3 id="todayWorkoutTitle">Glutes & legs</h3><p id="todayWorkoutDesc" class="muted" style="margin:3px 0;font-size:13px">Strength session · around 25–35 minutes</p></div><span class="tag" id="todayWorkoutTag">Strength</span></div><div id="todayWorkoutList" style="margin-top:10px"></div><button class="primary" style="width:100%;margin-top:12px" onclick="showPage('workout')">Open workout plan</button></div>
   <div class="sectionhead"><h2>Today's meal focus</h2><button class="smallbtn" onclick="showPage('food')">Meal plan</button></div>
-  <div class="card"><h3 id="todayMealTitle">Monday · Balanced Nigerian meals</h3><p class="muted" id="todayMealDesc">Protein at each meal, vegetables daily, and measured oil.</p><div class="note" style="margin-top:12px">Your 35-inch belly and 30-inch waist are goals, not guaranteed eight-week outcomes. Aim for steady habits and preserve strength.</div></div>
+  <div class="card"><h3 id="todayMealTitle">Monday · Balanced Nigerian meals</h3><p class="muted" id="todayMealDesc">Protein at each meal, vegetables daily, and measured oil.</p><div class="note" style="margin-top:12px">Use your own measurements and goals. Body measurements can fluctuate, and results are not guaranteed.</div></div>
 </section>
 
 <section class="page" id="food">
   <div class="sectionhead"><h2>7-day Nigerian menu</h2><span class="tag">Repeat weekly</span></div>
   <div class="card"><p class="muted" style="margin-top:0;font-size:13px">Calorie amounts vary with portion size and cooking oil. Use these meals as a flexible menu, not a rigid prescription. Add portions as needed to approach your daily target.</p><div id="mealList"></div></div>
   <div class="card"><h3>Simple portion guide</h3><div class="meal"><strong>Protein</strong><p>Include eggs, turkey, fish, chicken, beans or yoghurt at meals.</p></div><div class="meal"><strong>Starches</strong><p>Keep rice, pasta, yam, plantain and swallow in satisfying, moderate portions.</p></div><div class="meal"><strong>Vegetables & fruit</strong><p>Add vegetables at lunch and dinner and include fruit most days.</p></div><div class="meal"><strong>Oil, sauces and drinks</strong><p>Measure oil and groundnuts; account for sugary drinks and rich sauces.</p></div></div>
+
+  <div class="sectionhead"><h2>Nigerian food calorie tracker</h2><span class="tag">Estimates</span></div>
+  <div class="card">
+    <p class="tiny">Calories vary by recipe, oil, and portion size. These are approximate starting estimates, not exact nutrition measurements.</p>
+    <div class="field"><label for="foodChoice">Food</label><select id="foodChoice">
+      <option value="Jollof rice|350">Jollof rice — 1 medium serving (350 kcal)</option>
+      <option value="White rice|300">White rice — 1 medium serving (300 kcal)</option>
+      <option value="Boiled yam|180">Boiled yam — 1 medium portion (180 kcal)</option>
+      <option value="Boiled plantain|220">Boiled plantain — 1 medium portion (220 kcal)</option>
+      <option value="Beans porridge|350">Beans porridge — 1 medium bowl (350 kcal)</option>
+      <option value="Moi moi|200">Moi moi — 1 medium wrap (200 kcal)</option>
+      <option value="Boiled egg|78">Boiled egg — 1 egg (78 kcal)</option>
+      <option value="Turkey|220">Turkey — 1 medium piece (220 kcal)</option>
+      <option value="Grilled fish|200">Grilled fish — 1 serving (200 kcal)</option>
+      <option value="Chicken|220">Chicken — 1 medium piece (220 kcal)</option>
+      <option value="Egusi soup|300">Egusi soup — 1 medium ladle (300 kcal)</option>
+      <option value="Efo riro|180">Efo riro — 1 medium ladle (180 kcal)</option>
+      <option value="Okra soup|120">Okra soup — 1 medium ladle (120 kcal)</option>
+      <option value="Eba|250">Eba — 1 medium ball (250 kcal)</option>
+      <option value="Amala|220">Amala — 1 medium wrap (220 kcal)</option>
+      <option value="Fufu|250">Fufu — 1 medium portion (250 kcal)</option>
+      <option value="Oats with milk|300">Oats with milk — 1 bowl (300 kcal)</option>
+      <option value="Bread|160">Bread — 2 slices (160 kcal)</option>
+      <option value="Banana|105">Banana — 1 medium (105 kcal)</option>
+      <option value="Plain yoghurt|120">Plain yoghurt — 1 small cup (120 kcal)</option>
+      <option value="Groundnuts|170">Groundnuts — small handful (170 kcal)</option>
+      <option value="Pasta|330">Pasta — 1 medium serving (330 kcal)</option>
+      <option value="Other food|0">Other food — enter calories manually</option>
+    </select></div>
+    <div class="fields">
+      <div class="field"><label for="foodPortion">Number of portions</label><input id="foodPortion" type="number" min="0.25" max="10" step="0.25" value="1"></div>
+      <div class="field"><label for="foodCaloriesOverride">Calories (optional override)</label><input id="foodCaloriesOverride" type="number" min="0" max="5000" placeholder="Use estimate"></div>
+    </div>
+    <div class="field"><label for="foodMealType">Meal</label><select id="foodMealType"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snack</option></select></div>
+    <button class="primary" id="addFoodBtn" style="width:100%">Add food to today's log</button>
+    <div class="grid" style="margin-top:12px">
+      <div class="card metric" style="margin:0"><small>Calories logged today</small><strong id="foodTotalToday">0</strong><span>Estimated kcal</span></div>
+      <div class="card metric" style="margin:0"><small>Daily target</small><strong id="foodTargetToday">1,900</strong><span>Personal target</span></div>
+    </div>
+    <div id="foodLogToday" style="margin-top:12px"></div>
+  </div>
+
 </section>
 
-<section class="page" id="foodlog">
-  <div class="sectionhead"><h2>Nigerian food calorie tracker</h2><span class="tag">Daily log</span></div>
-  <div class="card">
-    <p class="muted" style="margin-top:0">Choose a food and portion to estimate your intake. Calories are approximate; recipes, portion sizes and oil can change them substantially.</p>
-    <div class="row"><div><small class="muted">Today's estimated intake</small><h2 style="margin:4px 0"><span id="foodTotal">0</span> kcal</h2></div><div style="text-align:right"><small class="muted">Daily guide</small><h3 id="foodTarget">1,900 kcal</h3></div></div>
-    <div class="bar"><i id="foodBar"></i></div><p id="foodRemaining" class="tiny">Add foods below to track today's estimate.</p>
-    <div class="fields">
-      <div class="field"><label for="foodMealType">Meal</label><select id="foodMealType"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snack</option></select></div>
-      <div class="field"><label for="foodChoice">Nigerian food / portion</label><select id="foodChoice"></select></div>
-      <div class="field"><label for="foodQty">Portions</label><input id="foodQty" type="number" min="0.25" max="10" step="0.25" value="1"></div>
-    </div>
-    <button class="primary" id="addFood" style="width:100%">+ Add to today's log</button>
-  </div>
-  <div class="card"><div class="row"><h3>Today's food log</h3><button class="smallbtn" id="clearFoodLog">Clear today</button></div><div id="foodLogList"><p class="muted">No foods logged yet.</p></div></div>
-  <div class="note">Use this as a guide, not a precise measurement or a reason to skip meals. Aim for a sustainable pattern with protein, vegetables, satisfying carbohydrates and enough energy.</div>
-</section>
 <section class="page" id="workout">
   <div class="sectionhead"><h2>Weekly training plan</h2><span class="tag">Repeat × 8 weeks</span></div>
   <div class="note">Warm up for 5 minutes. Rest 60–120 seconds between sets. Start with easy variations and stop for sharp pain, dizziness, chest pain or unusual breathlessness.</div>
@@ -77,31 +120,31 @@
   <div class="sectionhead"><h2>Measurement tracker</h2><span class="tag">Weekly</span></div>
   <div class="card">
     <div class="grid three">
-      <div class="metric"><small>Starting belly</small><strong>41″</strong><span>Goal 35″</span></div>
-      <div class="metric"><small>Starting waist</small><strong>35″</strong><span>Goal 30″</span></div>
-      <div class="metric"><small>Starting hips</small><strong>49″</strong><span>Goal 49″</span></div>
+      <div class="metric"><small>Starting belly</small><strong id="startBellyDisplay">—</strong><span>Your saved start</span></div>
+      <div class="metric"><small>Starting waist</small><strong id="startWaistDisplay">—</strong><span>Your saved start</span></div>
+      <div class="metric"><small>Starting hips</small><strong id="startHipsDisplay">—</strong><span>Your saved start</span></div>
     </div>
-    <p class="tiny">Measure in the morning under similar conditions. Belly = fullest abdominal point; waist = natural waist; hips = fullest part. Small variations are normal.</p>
+    <p class="tiny">Enter your own measurements below. Measure under similar conditions each week; small variations are normal.</p>
     <div class="weekrow head"><div>Week</div><div>Weight kg</div><div>Belly in</div><div>Waist in</div><div>Hips in</div></div>
-    <div id="tracker"></div>
-    <div class="sectionhead" style="margin-top:20px"><h2>Your progress charts</h2><span class="tag">From your entries</span></div>
-    <div class="card"><h3>Weight trend</h3><p class="tiny">kg · Enter weekly weights above to build your chart.</p><div id="weightChart" class="chartwrap"></div></div>
-    <div class="card"><h3>Measurements trend</h3><p class="tiny">inches · Belly, natural waist and hips.</p><div id="measureChart" class="chartwrap"></div></div>
+    <div id="tracker"></div><div class="card"><h3>Measurement trends</h3><p class="tiny">Charts appear as you enter weekly values.</p><div id="progressChart" style="overflow-x:auto"></div></div>
     <div class="field"><label for="progressNotes">Progress notes</label><textarea id="progressNotes" rows="3" placeholder="Energy, clothing fit, strength, cycle-related changes..."></textarea></div>
     <button class="primary" style="width:100%" id="exportBtn">Export my progress (CSV)</button>
-    <p class="tiny">Your entries stay in this browser on this device when local storage is available. Export a backup regularly.</p>
+    <p class="tiny">Your measurements sync to your account when online. Export a backup regularly.</p>
   </div>
   <div class="card"><h3>What progress means</h3><p class="muted">Look for trends in waist/belly, strength, energy and how clothes fit. Hip measurements may change with fat loss; glute training supports muscle but cannot guarantee a fixed hip measurement.</p></div>
 </section>
 
 <section class="page" id="settings">
-  <div class="sectionhead"><h2>Your personal profile</h2><span class="tag">Pre-filled for you</span></div>
+  <div class="sectionhead"><h2>Your personal profile</h2><span class="tag">Your account</span></div>
   <div class="card">
     <div class="fields">
-      <div class="field"><label>Age</label><input value="35" disabled></div>
-      <div class="field"><label>Sex</label><input value="Female" disabled></div>
-      <div class="field"><label>Height</label><input value="5 ft 7 in" disabled></div>
-      <div class="field"><label>Starting weight (kg)</label><input value="101" disabled></div>
+      <div class="field"><label for="profileAge">Age (optional)</label><input id="profileAge" type="number" min="13" max="110" placeholder="Your age"></div>
+      <div class="field"><label for="profileSex">Sex (optional)</label><select id="profileSex"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Another / prefer to self-describe</option></select></div>
+      <div class="field"><label for="profileHeight">Height (cm, optional)</label><input id="profileHeight" type="number" min="80" max="250" placeholder="e.g. 170"></div>
+      <div class="field"><label for="profileWeight">Starting weight (kg, optional)</label><input id="profileWeight" type="number" min="25" max="400" step="0.1" placeholder="e.g. 80"></div>
+      <div class="field"><label for="goalBelly">Belly goal (in, optional)</label><input id="goalBelly" type="number" min="10" max="100" step="0.1" placeholder="Your goal"></div>
+      <div class="field"><label for="goalWaist">Waist goal (in, optional)</label><input id="goalWaist" type="number" min="10" max="100" step="0.1" placeholder="Your goal"></div>
+      <div class="field"><label for="goalHips">Hip goal (in, optional)</label><input id="goalHips" type="number" min="10" max="100" step="0.1" placeholder="Your goal"></div>
       <div class="field"><label>Calorie target</label><input id="calorieTarget" type="number" value="1900" min="1200" max="3500"></div>
       <div class="field"><label>Daily steps target</label><input id="stepTarget" type="number" value="10000" min="1000" max="30000"></div>
     </div>
@@ -109,11 +152,11 @@
     <button class="primary" id="saveSettings" style="width:100%">Save my targets</button>
     <p id="settingsStatus" class="success" aria-live="polite"></p>
   </div>
-  <div class="card"><h3>Your goal measurements</h3><div class="meal"><div class="row"><div><strong>Belly</strong><p>41″ → 35″</p></div><span class="tag">−6″ goal</span></div></div><div class="meal"><div class="row"><div><strong>Waist</strong><p>35″ → 30″</p></div><span class="tag">−5″ goal</span></div></div><div class="meal"><div class="row"><div><strong>Hips</strong><p>49″ → 49″</p></div><span class="tag">Preserve shape</span></div></div><div class="note">These are ambitious goals for eight weeks, not guaranteed results. You can keep working toward them beyond week eight.</div></div>
-  <div class="card"><h3>Data & privacy</h3><p class="muted">This is a standalone prototype. It does not connect to Apple Health, send reminders, or sync between devices. Entries are stored locally in your browser where supported. Use Export on the Progress tab to save a backup.</p><button class="secondary" id="resetApp">Reset locally stored app data</button><p class="tiny danger">Reset deletes your entries from this browser. Export a backup first if you want to keep them.</p></div>
+  <div class="card"><h3>Your goals</h3><p class="muted">Your goal measurements are optional and editable above. Body-fat loss cannot be targeted to one area, and hip measurements may change as your body changes.</p></div>
+  <div class="card"><h3>Data & privacy</h3><p class="muted">Your account data is saved to your private Supabase account. Only your signed-in account can access its records under the database security rules. Export a backup regularly. Do not use this app for emergency or clinical decisions.</p><button class="secondary" id="resetApp">Reset locally stored app data</button><p class="tiny danger">Reset deletes your entries from this browser. Export a backup first if you want to keep them.</p></div>
 </section>
 </div>
-<div class="bottom"><div class="bottomin"><div><strong id="bottomDate">Your daily check-in</strong><span id="bottomHint">Small consistent steps count.</span></div><button class="primary" onclick="showPage('progress')">Log progress</button></div></div>
+<div class="bottom" id="appBottom" style="display:none"><div class="bottomin"><div><strong id="bottomDate">Your daily check-in</strong><span id="bottomHint">Small consistent steps count.</span></div><button class="primary" onclick="showPage('progress')">Log progress</button></div></div>
 <script>
 const meals=[
 {day:"Monday",breakfast:"Eggs, whole-wheat bread and an orange",lunch:"Jollof rice, grilled turkey and vegetables",dinner:"Efo riro, fish and a moderate portion of amala",snack:"Plain yoghurt and fruit"},
@@ -133,36 +176,184 @@ const workouts=[
 {day:"Saturday",title:"Longer walk",kind:"Cardio · 40–60 min",items:[["Comfortable walk","40–60 min, or split sessions"]]},
 {day:"Sunday",title:"Recovery",kind:"Rest day",items:[["Gentle walk or stretching","Optional"],["Meal preparation & recovery","As needed"]]}
 ];
-const defaultState={stepsByDate:{},waterByDate:{},dailyFood:{},measurements:Array.from({length:8},(_,i)=>i===0?({weight:"101",belly:"41",waist:"35",hips:"49"}):({weight:"",belly:"",waist:"",hips:""})),notes:"",calorieTarget:1900,stepTarget:10000};
-const foodOptions=[
-{name:"Jollof rice (1 medium cup)",kcal:350},{name:"White rice (1 medium cup)",kcal:300},{name:"Boiled yam (1 medium portion)",kcal:220},{name:"Boiled plantain (1 medium portion)",kcal:180},{name:"Pasta, cooked (1 cup)",kcal:220},{name:"Beans porridge (1 cup)",kcal:300},{name:"Moi moi (1 medium wrap)",kcal:220},{name:"Boiled egg (1 egg)",kcal:78},{name:"Turkey, cooked (100 g)",kcal:190},{name:"Chicken, cooked (100 g)",kcal:180},{name:"Grilled fish (100 g)",kcal:150},{name:"Egusi soup (1 cup)",kcal:350},{name:"Efo riro (1 cup)",kcal:250},{name:"Okra soup (1 cup)",kcal:180},{name:"Eba (1 medium ball)",kcal:300},{name:"Amala (1 medium portion)",kcal:300},{name:"Oats with milk (1 bowl)",kcal:300},{name:"Whole-wheat bread (2 slices)",kcal:180},{name:"Plain yoghurt (150 g)",kcal:100},{name:"Banana (1 medium)",kcal:105},{name:"Orange (1 medium)",kcal:60},{name:"Groundnuts (small handful, 25 g)",kcal:145},{name:"Palm oil / cooking oil (1 tablespoon)",kcal:120},{name:"Sweet potato (1 medium)",kcal:180},{name:"Akara (2 medium pieces)",kcal:250},{name:"Suya (100 g)",kcal:250},{name:"Fufu (1 medium portion)",kcal:300},{name:"Garri soaked (1 medium bowl)",kcal:350}
-];
+const defaultState={stepsByDate:{},waterByDate:{},measurements:Array.from({length:8},()=>({weight:"",belly:"",waist:"",hips:""})),notes:"",calorieTarget:1900,stepTarget:10000,profile:{age:"",sex:"",heightCm:"",startingWeight:"",goalBelly:"",goalWaist:"",goalHips:""},foodLogs:{}};
 let state=loadState();
 function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem("myShapePlanV1")||"{}")}}catch(e){return structuredClone(defaultState)}}
-function save(){try{localStorage.setItem("myShapePlanV1",JSON.stringify(state))}catch(e){}}
+function save(){try{localStorage.setItem("myShapePlanV1",JSON.stringify(state))}catch(e){};window.dispatchEvent(new CustomEvent("myshape:save",{detail:JSON.parse(JSON.stringify(state))}));}
+window.__myShapeGetState=()=>JSON.parse(JSON.stringify(state));
+window.addEventListener("myshape:load",e=>{state={...defaultState,...(e.detail||{})};state.profile={...defaultState.profile,...(state.profile||{})};renderTracker();renderToday();document.getElementById("progressNotes").value=state.notes||"";document.getElementById("calorieTarget").value=state.calorieTarget||1900;document.getElementById("stepTarget").value=state.stepTarget||10000;fillProfile();renderProfileSummary();renderFoodLog();});
 function dateKey(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
 function renderMeals(){document.getElementById("mealList").innerHTML=meals.map((m,i)=>`<div class="meal"><div class="row"><h3>${m.day}</h3><span class="tag">Day ${i+1}</span></div><p><b>Breakfast:</b> ${m.breakfast}</p><p><b>Lunch:</b> ${m.lunch}</p><p><b>Dinner:</b> ${m.dinner}</p><p><b>Snack:</b> ${m.snack}</p></div>`).join("")}
 function renderWorkouts(){document.getElementById("workoutList").innerHTML=workouts.map((w,i)=>`<div class="card"><div class="row"><div><h3>${w.day} · ${w.title}</h3><span class="muted" style="font-size:12px">${w.kind}</span></div><input type="checkbox" aria-label="Mark ${w.day} workout complete" id="done${i}" style="width:22px;height:22px;accent-color:var(--accent)"></div>${w.items.map(x=>`<div class="checkrow"><div style="flex:1"><strong>${x[0]}</strong><small>${x[1]}</small></div></div>`).join("")}<p class="tiny">Tick the box when you've completed this session.</p></div>`).join("");workouts.forEach((w,i)=>{const el=document.getElementById("done"+i);el.checked=!!(state.workoutDone&&state.workoutDone[dateKey()]&&state.workoutDone[dateKey()][i]);el.addEventListener("change",()=>{state.workoutDone=state.workoutDone||{};state.workoutDone[dateKey()]=state.workoutDone[dateKey()]||{};state.workoutDone[dateKey()][i]=el.checked;save()})})}
-function renderTracker(){const root=document.getElementById("tracker");root.innerHTML=state.measurements.map((m,i)=>`<div class="weekrow"><div><b>${i+1}</b>${i===0?'<div class="tiny">Start</div>':i===7?'<div class="tiny">End</div>':''}</div><input data-i="${i}" data-k="weight" type="number" placeholder="101" value="${esc(m.weight)}" aria-label="Week ${i+1} weight kg"><input data-i="${i}" data-k="belly" type="number" placeholder="${i===0?41:"—"}" value="${esc(m.belly)}" aria-label="Week ${i+1} belly inches"><input data-i="${i}" data-k="waist" type="number" placeholder="${i===0?35:"—"}" value="${esc(m.waist)}" aria-label="Week ${i+1} waist inches"><input data-i="${i}" data-k="hips" type="number" placeholder="${i===0?49:"—"}" value="${esc(m.hips)}" aria-label="Week ${i+1} hips inches"></div>`).join("");root.querySelectorAll("input").forEach(inp=>inp.addEventListener("change",()=>{state.measurements[+inp.dataset.i][inp.dataset.k]=inp.value;save();renderCharts()}));renderCharts()}
+function renderTracker(){const root=document.getElementById("tracker");root.innerHTML=state.measurements.map((m,i)=>`<div class="weekrow"><div><b>${i+1}</b>${i===0?'<div class="tiny">Start</div>':i===7?'<div class="tiny">End</div>':''}</div><input data-i="${i}" data-k="weight" type="number" placeholder="Weight" value="${esc(m.weight)}" aria-label="Week ${i+1} weight kg"><input data-i="${i}" data-k="belly" type="number" placeholder="Belly" value="${esc(m.belly)}" aria-label="Week ${i+1} belly inches"><input data-i="${i}" data-k="waist" type="number" placeholder="Waist" value="${esc(m.waist)}" aria-label="Week ${i+1} waist inches"><input data-i="${i}" data-k="hips" type="number" placeholder="Hips" value="${esc(m.hips)}" aria-label="Week ${i+1} hips inches"></div>`).join("");root.querySelectorAll("input").forEach(inp=>inp.addEventListener("change",()=>{state.measurements[+inp.dataset.i][inp.dataset.k]=inp.value;save();renderProfileSummary();renderChart()}));renderChart()}
+function renderChart(){const el=document.getElementById("progressChart");if(!el)return;const keys=[["weight","Weight (kg)"],["belly","Belly (in)"],["waist","Waist (in)"],["hips","Hips (in)"]];el.innerHTML=keys.map(([key,label])=>{const vals=(state.measurements||[]).map((m,i)=>({i,v:Number(m[key])})).filter(x=>Number.isFinite(x.v)&&x.v>0);if(!vals.length)return `<p class="tiny">${label}: enter weekly values to see your trend.</p>`;const min=Math.min(...vals.map(x=>x.v)),max=Math.max(...vals.map(x=>x.v));const range=max-min||1;const pts=vals.map(x=>`${20+x.i*38},${90-((x.v-min)/range)*65}`).join(" ");return `<div style="margin:12px 0"><strong>${label}</strong><svg viewBox="0 0 320 110" role="img" aria-label="${label} across 8 weeks" style="width:100%;max-width:420px;background:#fff;border-radius:10px"><line x1="12" y1="90" x2="308" y2="90" stroke="#ddd"/><polyline points="${pts}" fill="none" stroke="#466b55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${vals.map(x=>`<circle cx="${20+x.i*38}" cy="${90-((x.v-min)/range)*65}" r="4" fill="#466b55"><title>Week ${x.i+1}: ${x.v}</title></circle>`).join("")}<text x="12" y="104" font-size="9" fill="#777">Week 1</text><text x="265" y="104" font-size="9" fill="#777">Week 8</text></svg></div>`}).join("")}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function todayFood(){state.dailyFood=state.dailyFood||{};state.dailyFood[dateKey()]=state.dailyFood[dateKey()]||[];return state.dailyFood[dateKey()]}
-function renderFoodLog(){const sel=document.getElementById("foodChoice");if(!sel.options.length)sel.innerHTML=foodOptions.map((f,i)=>`<option value="${i}">${f.name} · ~${f.kcal} kcal</option>`).join("");const items=todayFood();const total=items.reduce((n,x)=>n+x.kcal,0),target=Number(state.calorieTarget||1900);document.getElementById("foodTotal").textContent=Math.round(total).toLocaleString();document.getElementById("foodTarget").textContent=target.toLocaleString()+" kcal";document.getElementById("foodBar").style.width=Math.min(100,total/target*100)+"%";document.getElementById("foodRemaining").textContent=total<=target?`${Math.round(target-total).toLocaleString()} kcal remaining to your guide (not a strict limit).`:`About ${Math.round(total-target).toLocaleString()} kcal above your guide today; simply return to your usual routine at the next meal.`;const root=document.getElementById("foodLogList");root.innerHTML=items.length?items.map((x,i)=>`<div class="meal"><div class="row"><div style="flex:1"><strong>${esc(x.name)}</strong><div class="tiny">${esc(x.meal)} · ${x.qty} portion(s)</div></div><strong>${Math.round(x.kcal)} kcal</strong><button class="secondary" data-remove-food="${i}" aria-label="Remove ${esc(x.name)}">×</button></div></div>`).join(""):'<p class="muted">No foods logged yet. Add your first food above.</p>';root.querySelectorAll('[data-remove-food]').forEach(b=>b.addEventListener('click',()=>{items.splice(Number(b.dataset.removeFood),1);save();renderFoodLog()}))}
-function renderCharts(){const specs=[{id:'weightChart',key:'weight',label:'Weight',unit:' kg',color:'#466b55'},{id:'measureChart',keys:['belly','waist','hips'],labels:['Belly','Waist','Hips']}];specs.forEach(spec=>{const root=document.getElementById(spec.id);if(!root)return;const series=spec.keys?spec.keys.map((key,i)=>({key,label:spec.labels[i],color:['#466b55','#b88c45','#bb8068'][i]})):[{key:spec.key,label:spec.label,color:spec.color}];const all=series.flatMap(a=>state.measurements.map((m,i)=>({week:i+1,v:parseFloat(m[a.key])})).filter(p=>Number.isFinite(p.v)));if(!all.length){root.innerHTML='<p class="muted">Your chart will appear when you enter measurements.</p>';return}const vals=all.map(p=>p.v),min=Math.min(...vals)-1,max=Math.max(...vals)+1,range=Math.max(1,max-min),W=320,H=150,L=30,R=10,T=12,B=24;let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${spec.id==='weightChart'?'Weight':'Body measurement'} trend chart" style="width:100%;height:auto;overflow:visible"><line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#d9d4cb"/>`;series.forEach(a=>{const pts=state.measurements.map((m,i)=>({week:i+1,v:parseFloat(m[a.key])})).filter(p=>Number.isFinite(p.v));if(!pts.length)return;const coords=pts.map(p=>({x:L+(p.week-1)*(W-L-R)/7,y:T+(max-p.v)*(H-T-B)/range}));svg+=`<polyline points="${coords.map(p=>p.x+','+p.y).join(' ')}" fill="none" stroke="${a.color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;coords.forEach((p,i)=>{svg+=`<circle cx="${p.x}" cy="${p.y}" r="3.5" fill="${a.color}"/><text x="${p.x}" y="${p.y-7}" text-anchor="middle" font-size="9" fill="#555">${pts[i].v}</text>`})});for(let w=1;w<=8;w++){const x=L+(w-1)*(W-L-R)/7;svg+=`<text x="${x}" y="${H-7}" text-anchor="middle" font-size="9" fill="#777">${w}</text>`}svg+='<text x="8" y="10" font-size="9" fill="#777">Wk</text></svg>';svg+='<div style="display:flex;gap:12px;flex-wrap:wrap;font-size:12px;margin-top:4px">'+series.map(a=>`<span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${a.color};margin-right:4px"></i>${a.label}</span>`).join('')+'</div>';root.innerHTML=svg})}
-function renderToday(){const key=dateKey(),steps=Number(state.stepsByDate[key]||0),target=Number(state.stepTarget||10000),water=Number(state.waterByDate[key]||0);document.getElementById("todayDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});document.getElementById("bottomDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"});document.getElementById("stepsInput").value=steps||"";document.getElementById("stepsDisplay").textContent=steps.toLocaleString()+" / "+target.toLocaleString();document.getElementById("stepsBar").style.width=Math.min(100,steps/target*100)+"%";document.getElementById("waterCount").textContent=water+" check-ins";const idx=(new Date().getDay()+6)%7,w=workouts[idx],m=meals[idx];document.getElementById("todayWorkoutTitle").textContent=w.title;document.getElementById("todayWorkoutDesc").textContent=w.kind;document.getElementById("todayWorkoutTag").textContent=idx===0||idx===2||idx===4?"Strength":idx===6?"Recovery":"Movement";document.getElementById("todayWorkoutList").innerHTML=w.items.slice(0,3).map(x=>`<div class="checkrow"><div><strong>${x[0]}</strong><small>${x[1]}</small></div></div>`).join("");document.getElementById("todayMealTitle").textContent=m.day+" · Meal focus";document.getElementById("todayMealDesc").textContent="Breakfast: "+m.breakfast+". Lunch: "+m.lunch+". Dinner: "+m.dinner+"."}
+function renderToday(){const key=dateKey(),steps=Number(state.stepsByDate[key]||0),target=Number(state.stepTarget||10000),water=Number(state.waterByDate[key]||0);document.getElementById("todayDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});document.getElementById("bottomDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"});document.getElementById("stepsInput").value=steps||"";document.getElementById("stepsDisplay").textContent=steps.toLocaleString()+" / "+target.toLocaleString();document.getElementById("stepsBar").style.width=Math.min(100,steps/target*100)+"%";document.getElementById("waterCount").textContent=water+" check-ins";if(document.getElementById("foodTotalToday"))renderFoodLog();const idx=(new Date().getDay()+6)%7,w=workouts[idx],m=meals[idx];document.getElementById("todayWorkoutTitle").textContent=w.title;document.getElementById("todayWorkoutDesc").textContent=w.kind;document.getElementById("todayWorkoutTag").textContent=idx===0||idx===2||idx===4?"Strength":idx===6?"Recovery":"Movement";document.getElementById("todayWorkoutList").innerHTML=w.items.slice(0,3).map(x=>`<div class="checkrow"><div><strong>${x[0]}</strong><small>${x[1]}</small></div></div>`).join("");document.getElementById("todayMealTitle").textContent=m.day+" · Meal focus";document.getElementById("todayMealDesc").textContent="Breakfast: "+m.breakfast+". Lunch: "+m.lunch+". Dinner: "+m.dinner+"."}
 document.getElementById("stepsInput").addEventListener("change",e=>{state.stepsByDate[dateKey()]=Math.max(0,Number(e.target.value||0));save();renderToday()});
 document.getElementById("waterPlus").addEventListener("click",()=>{state.waterByDate[dateKey()]=Number(state.waterByDate[dateKey()]||0)+1;save();renderToday()});
 document.getElementById("waterMinus").addEventListener("click",()=>{state.waterByDate[dateKey()]=Math.max(0,Number(state.waterByDate[dateKey()]||0)-1);save();renderToday()});
 document.getElementById("waterReset").addEventListener("click",()=>{state.waterByDate[dateKey()]=0;save();renderToday()});
 document.getElementById("progressNotes").addEventListener("change",e=>{state.notes=e.target.value;save()});
 document.getElementById("calorieTarget").value=state.calorieTarget;document.getElementById("stepTarget").value=state.stepTarget;
-document.getElementById("saveSettings").addEventListener("click",()=>{state.calorieTarget=Math.max(1200,Math.min(3500,Number(document.getElementById("calorieTarget").value)||1900));state.stepTarget=Math.max(1000,Math.min(30000,Number(document.getElementById("stepTarget").value)||10000));save();document.getElementById("settingsStatus").textContent="Your targets have been saved on this device.";renderToday()});
-document.getElementById("addFood").addEventListener("click",()=>{const f=foodOptions[Number(document.getElementById("foodChoice").value)],qty=Math.max(.25,Math.min(10,Number(document.getElementById("foodQty").value)||1));todayFood().push({name:f.name,meal:document.getElementById("foodMealType").value,qty,kcal:f.kcal*qty});save();renderFoodLog()});
-document.getElementById("clearFoodLog").addEventListener("click",()=>{if(confirm("Clear today's food log?")){state.dailyFood[dateKey()]=[];save();renderFoodLog()}});
+function fillProfile(){const p=state.profile||{};const ids={profileAge:"age",profileSex:"sex",profileHeight:"heightCm",profileWeight:"startingWeight",goalBelly:"goalBelly",goalWaist:"goalWaist",goalHips:"goalHips"};Object.entries(ids).forEach(([id,k])=>{const el=document.getElementById(id);if(el)el.value=p[k]||""})}
+function renderProfileSummary(){const p=state.profile||{};document.getElementById("homeCalorieTarget").textContent=(state.calorieTarget||1900).toLocaleString()+" kcal";document.getElementById("homeStepTarget").textContent=(state.stepTarget||10000).toLocaleString();document.getElementById("homeWeightGoal").textContent=p.startingWeight?Number(p.startingWeight).toLocaleString()+" kg start":"Optional";const first=state.measurements?.[0]||{};document.getElementById("startBellyDisplay").textContent=first.belly?first.belly+'″':'—';document.getElementById("startWaistDisplay").textContent=first.waist?first.waist+'″':'—';document.getElementById("startHipsDisplay").textContent=first.hips?first.hips+'″':'—'}
+fillProfile();renderProfileSummary();
+Object.entries({profileAge:"age",profileSex:"sex",profileHeight:"heightCm",profileWeight:"startingWeight",goalBelly:"goalBelly",goalWaist:"goalWaist",goalHips:"goalHips"}).forEach(([id,k])=>document.getElementById(id).addEventListener("change",e=>{state.profile=state.profile||{};state.profile[k]=e.target.value;save();renderProfileSummary()}));
+document.getElementById("saveSettings").addEventListener("click",()=>{state.calorieTarget=Math.max(1200,Math.min(3500,Number(document.getElementById("calorieTarget").value)||1900));state.stepTarget=Math.max(1000,Math.min(30000,Number(document.getElementById("stepTarget").value)||10000));save();document.getElementById("settingsStatus").textContent="Your targets have been saved to your account.";renderToday();renderProfileSummary();renderFoodLog()});
+
+const foodSelect=document.getElementById("foodChoice");
+foodSelect.addEventListener("change",()=>{document.getElementById("foodCaloriesOverride").value="";});
+function renderFoodLog(){
+ const key=dateKey(), entries=(state.foodLogs&&state.foodLogs[key])||[];
+ const total=entries.reduce((sum,x)=>sum+Number(x.calories||0),0);
+ document.getElementById("foodTotalToday").textContent=Math.round(total).toLocaleString();
+ document.getElementById("foodTargetToday").textContent=Number(state.calorieTarget||1900).toLocaleString();
+ const root=document.getElementById("foodLogToday");
+ root.innerHTML=entries.length?entries.map((x,i)=>`<div class="meal"><div class="row"><div><strong>${esc(x.name)}</strong><p>${esc(x.mealType)} · ${Number(x.portion).toLocaleString()} portion(s)</p></div><strong>${Math.round(x.calories)} kcal</strong><button class="smallbtn" data-remove-food="${i}" aria-label="Remove ${esc(x.name)}">Remove</button></div></div>`).join(""):'<p class="tiny">No foods logged today yet.</p>';
+ root.querySelectorAll("[data-remove-food]").forEach(btn=>btn.addEventListener("click",()=>{state.foodLogs[key].splice(Number(btn.dataset.removeFood),1);save();renderFoodLog()}));
+}
+document.getElementById("addFoodBtn").addEventListener("click",()=>{
+ const [name,base]=foodSelect.value.split("|");
+ const portion=Math.max(.25,Math.min(10,Number(document.getElementById("foodPortion").value)||1));
+ const override=document.getElementById("foodCaloriesOverride").value;
+ const calories=(override!==""?Number(override):Number(base)*portion);
+ if(!Number.isFinite(calories)||calories<0)return;
+ const key=dateKey();state.foodLogs=state.foodLogs||{};state.foodLogs[key]=state.foodLogs[key]||[];
+ state.foodLogs[key].push({name,portion,calories,mealType:document.getElementById("foodMealType").value});
+ document.getElementById("foodCaloriesOverride").value="";
+ save();renderFoodLog();
+});
+
 document.getElementById("exportBtn").addEventListener("click",()=>{const rows=[["Week","Weight kg","Belly inches","Waist inches","Hips inches"],...state.measurements.map((m,i)=>[i+1,m.weight,m.belly,m.waist,m.hips])];const csv=rows.map(r=>r.map(x=>'"'+String(x??"").replace(/"/g,'""')+'"').join(",")).join("\n");const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="my-shape-plan-progress.csv";a.click();URL.revokeObjectURL(url)});
-document.getElementById("resetApp").addEventListener("click",()=>{if(confirm("Reset all locally stored steps, water check-ins, settings and measurements? Export a backup first if needed.")){localStorage.removeItem("myShapePlanV1");state=loadState();renderTracker();renderToday();document.getElementById("progressNotes").value="";document.getElementById("calorieTarget").value=state.calorieTarget;document.getElementById("stepTarget").value=state.stepTarget;document.getElementById("settingsStatus").textContent="Local app data reset."}});
+document.getElementById("resetApp").addEventListener("click",()=>{if(confirm("Reset all locally stored steps, water check-ins, settings and measurements? Export a backup first if needed.")){localStorage.removeItem("myShapePlanV1");state=loadState();renderTracker();renderToday();document.getElementById("progressNotes").value="";document.getElementById("calorieTarget").value=state.calorieTarget;document.getElementById("stepTarget").value=state.stepTarget;
+function fillProfile(){const p=state.profile||{};const ids={profileAge:"age",profileSex:"sex",profileHeight:"heightCm",profileWeight:"startingWeight",goalBelly:"goalBelly",goalWaist:"goalWaist",goalHips:"goalHips"};Object.entries(ids).forEach(([id,k])=>{const el=document.getElementById(id);if(el)el.value=p[k]||""})}
+function renderProfileSummary(){const p=state.profile||{};document.getElementById("homeCalorieTarget").textContent=(state.calorieTarget||1900).toLocaleString()+" kcal";document.getElementById("homeStepTarget").textContent=(state.stepTarget||10000).toLocaleString();document.getElementById("homeWeightGoal").textContent=p.startingWeight?Number(p.startingWeight).toLocaleString()+" kg start":"Optional";const first=state.measurements?.[0]||{};document.getElementById("startBellyDisplay").textContent=first.belly?first.belly+'″':'—';document.getElementById("startWaistDisplay").textContent=first.waist?first.waist+'″':'—';document.getElementById("startHipsDisplay").textContent=first.hips?first.hips+'″':'—'}
+fillProfile();renderProfileSummary();
+Object.entries({profileAge:"age",profileSex:"sex",profileHeight:"heightCm",profileWeight:"startingWeight",goalBelly:"goalBelly",goalWaist:"goalWaist",goalHips:"goalHips"}).forEach(([id,k])=>document.getElementById(id).addEventListener("change",e=>{state.profile=state.profile||{};state.profile[k]=e.target.value;save();renderProfileSummary()}));document.getElementById("settingsStatus").textContent="Local app data reset."}});
 document.getElementById("progressNotes").value=state.notes||"";
-renderMeals();renderWorkouts();renderTracker();renderToday();renderFoodLog();renderCharts();
+renderMeals();renderWorkouts();renderTracker();renderToday();renderFoodLog();
 </script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+// STEP: replace these two values with the Project URL and anon/public key from
+// Supabase Dashboard > Project Settings > API. Never put a service_role key here.
+const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
+const SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_PUBLIC_KEY_HERE";
+
+const gate = document.getElementById("authGate");
+const app = document.getElementById("mainApp");
+const bottom = document.getElementById("appBottom");
+const statusEl = document.getElementById("authStatus");
+const cloudStatus = document.getElementById("cloudStatus");
+let supabase = null;
+let currentUser = null;
+let applyingCloudState = false;
+let saveTimer = null;
+
+function status(msg, isError=false) {
+  statusEl.textContent = msg;
+  statusEl.className = isError ? "tiny danger" : "tiny";
+}
+function showSignedIn(user) {
+  currentUser = user;
+  gate.style.display = "none";
+  app.style.display = "block";
+  bottom.style.display = "block";
+  document.getElementById("signedInEmail").textContent = user.email || "Signed-in user";
+  cloudStatus.textContent = "Your account is private. Syncing changes when online.";
+}
+function showSignedOut() {
+  currentUser = null;
+  gate.style.display = "block";
+  app.style.display = "none";
+  bottom.style.display = "none";
+}
+async function loadUserData(user) {
+  const { data, error } = await supabase.from("user_app_data").select("data").eq("user_id", user.id).maybeSingle();
+  if (error) throw error;
+  if (data && data.data) {
+    applyingCloudState = true;
+    window.dispatchEvent(new CustomEvent("myshape:load", { detail: data.data }));
+    applyingCloudState = false;
+  } else {
+    // Start clean for each new account; never import another device's local data.
+    const initial = {
+      stepsByDate:{}, waterByDate:{},
+      measurements:Array.from({length:8},()=>({weight:"",belly:"",waist:"",hips:""})),
+      notes:"", calorieTarget:1900, stepTarget:10000,
+      profile:{age:"",sex:"",heightCm:"",startingWeight:"",goalBelly:"",goalWaist:"",goalHips:""}, foodLogs:{}
+    };
+    applyingCloudState = true;
+    window.dispatchEvent(new CustomEvent("myshape:load", { detail: initial }));
+    applyingCloudState = false;
+    const { error: insertError } = await supabase.from("user_app_data").insert({user_id:user.id, data:initial});
+    if (insertError && insertError.code !== "23505") throw insertError;
+  }
+  cloudStatus.textContent = "Synced to your private account.";
+}
+async function boot() {
+  if (SUPABASE_URL.includes("PASTE_") || SUPABASE_ANON_KEY.includes("PASTE_")) {
+    status("The app needs your Supabase Project URL and anon/public key before account sign-in can work.", true);
+    return;
+  }
+  supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}
+  });
+  const {data:{session}} = await supabase.auth.getSession();
+  if (session) {
+    try { showSignedIn(session.user); await loadUserData(session.user); }
+    catch(e) { cloudStatus.textContent = "Could not load your private data: " + (e.message || "Check Supabase setup."); }
+  }
+  supabase.auth.onAuthStateChange(async (_event, session) => {
+    if (session) {
+      showSignedIn(session.user);
+      try { await loadUserData(session.user); }
+      catch(e) { cloudStatus.textContent = "Sync error: " + (e.message || "Check database setup."); }
+    } else showSignedOut();
+  });
+}
+document.getElementById("signUpBtn").addEventListener("click", async () => {
+  if (!supabase) { await boot(); if (!supabase) return; }
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+  if (!email || password.length < 8) return status("Enter a valid email and a password of at least 8 characters.", true);
+  status("Creating your account…");
+  const {data,error} = await supabase.auth.signUp({email,password});
+  if (error) return status(error.message, true);
+  if (data.session) status("Account created. You're signed in.");
+  else status("Account created. Check your email to confirm your address, then sign in.");
+});
+document.getElementById("signInBtn").addEventListener("click", async () => {
+  if (!supabase) { await boot(); if (!supabase) return; }
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+  if (!email || !password) return status("Enter your email and password.", true);
+  status("Signing in…");
+  const {error} = await supabase.auth.signInWithPassword({email,password});
+  if (error) return status(error.message, true);
+  status("Signed in successfully.");
+});
+document.getElementById("signOutBtn").addEventListener("click", async () => {
+  if (supabase) await supabase.auth.signOut();
+  showSignedOut();
+});
+window.addEventListener("myshape:save", (event) => {
+  if (!supabase || !currentUser || applyingCloudState) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    cloudStatus.textContent = "Saving your private data…";
+    const {error} = await supabase.from("user_app_data").upsert(
+      {user_id:currentUser.id, data:event.detail, updated_at:new Date().toISOString()},
+      {onConflict:"user_id"}
+    );
+    cloudStatus.textContent = error ? "Sync error: " + error.message : "All changes saved to your private account.";
+  }, 500);
+});
+boot();
+</script>
+
 </body></html>
